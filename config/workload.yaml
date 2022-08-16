@@ -1,10 +1,10 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: sample-app
+  name: csharp-weather
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: sample-app
+    app.kubernetes.io/part-of: csharp-weather
 spec:
   source:
     git:

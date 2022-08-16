@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: csharp-app
+  name: csharp-weather
   annotations:
-    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=csharp-app"
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=csharp-weather"
 spec:
   type: service
   lifecycle: experimental
   owner: tanzu-team
-  system: csharp
+  system: dotnet-csharp
