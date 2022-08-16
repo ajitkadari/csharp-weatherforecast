@@ -1,10 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-app
+  name: csharp-app
   annotations:
-    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=sample-app"
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=csharp-app"
 spec:
   type: service
   lifecycle: experimental
-  owner: default-team
+  owner: tanzu-team
+  system: csharp
