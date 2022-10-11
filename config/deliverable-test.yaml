@@ -1,0 +1,28 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  labels:
+    app.kubernetes.io/component: deliverable
+    app.kubernetes.io/part-of: csharp-weather
+    app.tanzu.vmware.com/deliverable-type: web
+    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/workload-type: web
+    carto.run/cluster-template-name: deliverable-template
+    carto.run/resource-name: deliverable
+    carto.run/supply-chain-name: source-test-scan-to-url
+    carto.run/template-kind: ClusterTemplate
+    carto.run/workload-name: csharp-weather
+    carto.run/workload-namespace: workloads
+  name: csharp-weather
+  namespace: workloads
+spec:
+  params:
+    - name: gitops_ssh_secret
+      value: ""
+    - name: gitops_sub_path
+      value: config/workloads/csharp-weather
+  source:
+    git:
+      ref:
+        branch: test
+      url: https://github.com/ajitkadari/tap-gitops.git
