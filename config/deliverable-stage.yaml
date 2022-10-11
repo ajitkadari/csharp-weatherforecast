@@ -24,4 +24,4 @@ spec:
     git:
       ref:
         branch: stage
-      url: https://github.com/ajitkadari/tap-gitops.git
+      url: https://github.com/ajitkadari/csharp-weatherforecast-gitops.git
